@@ -65,7 +65,7 @@ docker push gcr.io/[PROJECT_ID]/[IMAGE_NAME]
 ```
 7. Deploy Docker image to Google Cloud Run
 ```
-gcloud beta run deploy [SERVICE_NAME] --image gcr.io/[PROJECT_ID]/[IMAGE_NAME] --platform managed
+gcloud run deploy [SERVICE_NAME] --image gcr.io/[PROJECT_ID]/[IMAGE_NAME]  --platform managed --set-env-vars-from-file=config.env
 ```
 
 Note: Replace [PROJECT_ID], [IMAGE_NAME], and [SERVICE_NAME] with your project and application information. Also make sure to run these commands from the directory that contains your Dockerfile
